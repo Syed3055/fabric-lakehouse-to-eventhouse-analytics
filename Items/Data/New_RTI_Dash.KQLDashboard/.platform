@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDashboard",
+    "displayName": "New_RTI_Dash",
+    "description": "New_RTI_Dash"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "61975351-b4a0-bad5-4d23-ab69208b1cfe"
+  }
+}

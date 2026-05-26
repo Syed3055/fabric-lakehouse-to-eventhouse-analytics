@@ -1,0 +1,83 @@
+{
+  "schema_version": 75,
+  "tiles": [
+    {
+      "id": "ee89ac13-2d64-4c4d-b2d9-8ca0fef5faf9",
+      "title": "New Tile",
+      "visualType": "table",
+      "pageId": "0f52fc5b-d2dd-4dff-a0fe-c459dc6a9f8b",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "993332de-776d-460a-9e0d-5e5a61ef7565"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": {
+          "all": true,
+          "limit": 10
+        }
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "f6fd9a4f-1247-4c19-856c-a4db34a9ba21",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "6b7b875a-4aa0-429f-a810-0be33108a215",
+      "kind": "kusto-trident",
+      "name": "LH_5676_EventhouseEndpoint",
+      "clusterUri": "https://trd-q6hhntdeatcrejmzfz.z7.kusto.fabric.microsoft.com",
+      "databaseArtifactId": "1a721e9f-c0d2-4010-8d87-67f34ece23e4",
+      "database": "1a721e9f-c0d2-4010-8d87-67f34ece23e4",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "0f52fc5b-d2dd-4dff-a0fe-c459dc6a9f8b"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "6b7b875a-4aa0-429f-a810-0be33108a215"
+      },
+      "text": "external_table('category')\n| count \n\n",
+      "id": "993332de-776d-460a-9e0d-5e5a61ef7565",
+      "usedVariables": []
+    }
+  ],
+  "embeddedApps": []
+}
